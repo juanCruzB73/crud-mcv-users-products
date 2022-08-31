@@ -1,0 +1,31 @@
+<%- include("./partials/head.ejs")  %> 
+<body>
+    <%- include("./partials/header.ejs")  %> 
+    <main>
+        <h2>Login</h2>
+        <form action="/users/access" method="post">
+            <fieldset class="field">
+                <label for="email">
+                    <i class="fa-solid fa-user"></i>
+                </label>
+                <input type="text" name="email" id="email">
+            </fieldset>
+            <fieldset class="field">
+                <label for="password">
+                    <i class="fa-solid fa-key"></i>
+                </label>
+                <input type="password" name="password" id="password">
+            </fieldset>
+            <fieldset class=" field btns">
+                <button type="submit">
+                    <i class="fa-solid fa-plane"></i>
+                </button>
+                <button type="reset">
+                    <i class="fa-solid fa-sync"></i>
+                </button>
+            </fieldset>
+        </form>
+    </main>
+    <%- include("./partials/footer.ejs")  %> 
+</body>
+</html>
