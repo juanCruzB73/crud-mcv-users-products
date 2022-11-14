@@ -1,15 +1,15 @@
 const {index,write} = require('../models/users.model');
 const {validationResult} = require("express-validator")
 module.exports = {
-    login: (req,res) => res.render('login'),
-    register: (req,res) => res.render('register'),
-    profile: (req,res) => res.render('profile'),
+    login: (req,res) => res.render('users/login'),
+    register: (req,res) => res.render('users/register'),
+    profile: (req,res) => res.render('users/profile'),
     save: (req,res) => {
     //control de las validaciones
         const result = validationResult(req);    
         if(!result.isEmpty()){
             let errores = result.mapped();
-            return res.render("register", {
+            return res.render("users/register", {
             style: "register",
             errores: errores,
             data: req.body

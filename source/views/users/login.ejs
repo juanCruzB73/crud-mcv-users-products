@@ -1,6 +1,11 @@
-<%- include("./partials/head.ejs")  %> 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head.ejs")  %>
+        <link rel="stylesheet" href="/css/login.css">
+    </head> 
 <body>
-    <%- include("./partials/header.ejs")  %> 
+    <%- include("../partials/header.ejs")  %> 
     <main>
         <h2>Login</h2>
         <form action="/users/access" method="post">
@@ -26,6 +31,6 @@
             </fieldset>
         </form>
     </main>
-    <%- include("./partials/footer.ejs")  %> 
+    <%- include("../partials/footer.ejs")  %> 
 </body>
 </html>

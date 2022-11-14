@@ -3,7 +3,7 @@ const router = Router();
 const { login,register,profile,save } = require('../controllers/users.controllers');
 const multer = require('multer');
 const storage = require('../modules/storage');
-const upload = multer({storage:storage('../../uploads/users')});
+const upload = multer({storage:storage('../../public/users')});
 const validador = require("../validations/register")
 router.get('/login', login)
 router.get('/register', register)

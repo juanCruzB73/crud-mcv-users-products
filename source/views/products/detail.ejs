@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs")  %>
+        <link rel="stylesheet" href="/css/detail.css">
+</head>
+<body>
+    <%- include("../partials/header.ejs")  %>
+    <% if (product) { %>
+        <article>
+            <nav>
+                <a href="/productos/" class="boton">volver</a>
+            </nav>
+            <h2><%= product.name %><span>  $<%= product.price %> </span> </h2>
+            <nav>
+                <a href="/productos/<%= product.categoria %>">
+                    <%= product.categoria %>
+                </a><br>
+                <a href="/productos/edit/<%= product.id %>" class="boton">editar</a><br>
+            </nav>
+            <picture>
+                <img src="/products/<%= product.img %>">
+            </picture>
+            <form action="/productos/borrar?m=DELETE" method="post" >
+                <input type="hidden" name="id" value="<%= product.id %>">
+                <button type="submit" class="boton">borrar</button>
+            </form>
+        </article>
+    <% } else { %>
+         <h2>
+            no hay productos
+         </h2>
+    <% } %>
+    <%- include("../partials/footer.ejs")  %>
+</body>
+</html>
