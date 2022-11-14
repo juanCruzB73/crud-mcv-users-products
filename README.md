@@ -1,2 +1,2 @@
 # crud-users
-practise of a login and register using crud+mcv(ejs)
+backend proyect for users(login, register) and products(create, edit, delate, detail) using crud, mcv(ejs) and json as the db
