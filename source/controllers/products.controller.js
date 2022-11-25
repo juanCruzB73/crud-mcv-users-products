@@ -3,7 +3,7 @@ const {unlinkSync} = require("fs");
 const {resolve} = require("path")
 
 const controller =  {
-    index: (req, res) => { //siempre va return
+    index: (req, res) => {
 
         let products = all();
 
@@ -25,7 +25,7 @@ const controller =  {
    },
    save: (req, res) => {
     req.body.img = req.files && req.files.length > 0 ? req.files[0].filename : "default.png"
-    let nuevo = generate(req.body)//forma un recurso; objeto lit para base de datos
+    let nuevo = generate(req.body)
     let todos = all();
     todos.push(nuevo);
     write(todos)

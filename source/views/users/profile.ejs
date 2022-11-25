@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head.ejs")  %>
+        <link rel="stylesheet" href="/css/profile.css">
+    </head>
+<body>
+    <%- include("../partials/header.ejs")  %> 
+    <main>
+        <article>
+            <h2> <%= user.email %>  </h2>
+             <picture><img src="/users/<%= user.avatar %>" width="100px" alt=""></picture>
+        </article>
+    </main>
+    <%- include("../partials/footer.ejs")  %> 
+</body>
+</html>

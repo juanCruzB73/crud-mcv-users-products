@@ -13,13 +13,25 @@
                 <label for="email">
                     <i class="fa-solid fa-user"></i>
                 </label>
-                <input type="text" name="email" id="email">
+                <input type="text" name="email" id="email"
+                value="<%= locals.errores && !locals.errores.email && locals.data ? locals.data.email : null %>"> 
+                <% if (locals.errores && locals.errores.email) { %>
+                    <p class="feedback">
+                        <%= locals.errores.email.msg %> 
+                    </p>
+                    <% } %>
             </fieldset>
             <fieldset class="field">
                 <label for="password">
                     <i class="fa-solid fa-key"></i>
                 </label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password"
+                value="<%= locals.errores && !locals.errores.password && locals.data ? locals.data.password: null %>"> 
+                <% if (locals.errores && locals.errores.password) { %>
+                    <p class="feedback">
+                        <%= locals.errores.password.msg %> 
+                    </p>
+                <% } %>
             </fieldset>
             <fieldset class=" field btns">
                 <button type="submit">

@@ -23,6 +23,7 @@ main form{
     flex: 0 0 100%;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .field input{
     padding: 0 1rem;

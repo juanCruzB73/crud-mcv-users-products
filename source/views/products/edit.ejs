@@ -2,37 +2,40 @@
 <html lang="en">
 <head>
     <%- include("../partials/head.ejs")  %> 
-    <link rel="stylesheet" href="/css/create.css">
+    <link rel="stylesheet" href="/css/edit.css">
 </head>
 <body>
     <%- include("../partials/header.ejs")  %>
-    <nav>
-        <a href="/productos/" class="boton">volver</a>
-    </nav>
-    <form action="/productos/actualizar?m=PUT" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<%= product.id %> ">
-        <fieldset>
-            <legend>Nombre de producto</legend>
-            <input type="text" name="name" id="name" value="<%= product.name %>">
-        </fieldset>
-        <fieldset>
-            <legend>precio producto</legend>
-            <input type="text" name="price" id="price" value="<%= product.price %>">
-        </fieldset>
-        <fieldset>
-            <legend>Categoria de producto</legend>
-            <input type="radio" name="categoria" id="categoria-lol" value="lol" <%= product.categoria == "lol" ? "checked" : "" %>>
-            <label for="categoria-lol">lol</label>
-            <input type="radio" name="categoria" id="categoria-lal" value="lal" <%= product.categoria == "lal" ? "checked" : "" %>>
-            <label for="categoria-lal">lal</label>
-        </fieldset>
-        <fieldset>
-            <legend>Archivos</legend>
-            <input type="file" name="img" id="img">
-            <label for="img">Subir Imagen</label>
-        </fieldset>
-        <button type="submit" class="boton">GUARDAR</button>
-    </form>
+    <main>
+        <nav>
+            <a href="/productos/" class="boton">volver</a>
+        </nav>
+        <h1>Edita productos</h1>
+        <form action="/productos/actualizar?m=PUT" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<%= product.id %> ">
+            <fieldset>
+                <legend>Nombre de producto</legend>
+                <input type="text" name="name" id="name" value="<%= product.name %>">
+            </fieldset>
+            <fieldset>
+                <legend>precio producto</legend>
+                <input type="text" name="price" id="price" value="<%= product.price %>">
+            </fieldset>
+            <fieldset>
+                <legend>Categoria de producto</legend>
+                <input type="radio" name="categoria" id="categoria-lol" value="lol" <%= product.categoria == "lol" ? "checked" : "" %>>
+                <label for="categoria-lol">lol</label>
+                <input type="radio" name="categoria" id="categoria-lal" value="lal" <%= product.categoria == "lal" ? "checked" : "" %>>
+                <label for="categoria-lal">lal</label>
+            </fieldset>
+            <fieldset>
+                <legend>Archivos</legend>
+                <input type="file" name="img" id="img">
+                <label for="img">Subir Imagen</label>
+            </fieldset>
+            <button type="submit" class="boton">GUARDAR</button>
+        </form>
+    </main>
     <%- include("../partials/footer.ejs")  %>
 </body>
 </html>

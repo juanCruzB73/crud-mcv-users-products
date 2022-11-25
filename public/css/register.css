@@ -22,6 +22,7 @@ main form{
     display: flex;
     flex: 0 0 100%;
     gap: 1rem;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .field input{

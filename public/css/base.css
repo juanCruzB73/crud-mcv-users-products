@@ -4,6 +4,7 @@
     padding: 0;
     border: none;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body{
@@ -47,5 +48,14 @@ img{
     margin: 10px 0 15px 20px
 }
 .boton{
-    background-color: blue;
+    background-color: rgb(35, 212, 64);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 15px;
+}
+.feedback{
+    display: flex;
+    flex: 0 0 100%;
+    background-color: tomato;
+    color: white;
 }

@@ -7,18 +7,21 @@
 </head>
 <body>
     <%- include("../partials/header.ejs")  %>
-    <% if (products.length > 0) { %>
-        <ul>
-            <% products.forEach(element => { %>
-             <%- include ("../partials/products.ejs", {element:element}) %> 
-            <% }) %>
-        </ul>
-    <% } else { %>
-         <h2>
-            no hay productos
-         </h2>
-    <% } %>
-    <nav> <a href="/productos/nuevo" class="boton">Nuevo producto</a> </nav>
-    <%- include("../partials/footer.ejs")  %>
+    <main>
+        <h1>Lista de productos</h1>
+        <% if (products.length > 0) { %>
+            <ul>
+                <% products.forEach(element => { %>
+                 <%- include ("../partials/products.ejs", {element:element}) %> 
+                <% }) %>
+            </ul>
+        <% } else { %>
+             <h2>
+                no hay productos
+             </h2>
+        <% } %>
+        <nav> <a href="/productos/nuevo" class="boton">Nuevo producto</a> </nav>
+        <%- include("../partials/footer.ejs")  %>
+    </main>
 </body>
 </html>

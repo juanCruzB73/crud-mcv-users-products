@@ -1,22 +1,29 @@
 <header id="main-header">
-    <picture id="branding">
-        <img src="/assets/logo.png" alt="brand">
-    </picture>
     <nav id="main-nav">
         <a href="/">
-            <i class="fa-solid fa-home"></i>
+            home
         </a>
-        <a href="/users/login">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
-        </a>
-        <a href="/users/register">
-            <i class="fa-solid fa-plus"></i>
-        </a>
+        <% if (!user) { %>
+            <a href="/users/login">
+                login
+            </a>
+            <a href="/users/register">
+                registro
+            </a>
+            <% } else { %>
+                <a href="/users/logout">
+                    logout
+                </a>
+                <a href="/users/profile">
+                    perfil
+                </a>
+        <% } %>
+        
         <a href="/productos/nuevo">
-            crear p
+            crear productos
         </a>
-        <a href="/productos/list">
-            lista p
+        <a href="/productos">
+            productos
         </a>
     </nav>
 </header>

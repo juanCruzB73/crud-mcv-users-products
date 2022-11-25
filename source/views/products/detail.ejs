@@ -6,31 +6,33 @@
 </head>
 <body>
     <%- include("../partials/header.ejs")  %>
-    <% if (product) { %>
-        <article>
-            <nav>
-                <a href="/productos/" class="boton">volver</a>
-            </nav>
-            <h2><%= product.name %><span>  $<%= product.price %> </span> </h2>
-            <nav>
-                <a href="/productos/<%= product.categoria %>">
-                    <%= product.categoria %>
-                </a><br>
-                <a href="/productos/edit/<%= product.id %>" class="boton">editar</a><br>
-            </nav>
-            <picture>
-                <img src="/products/<%= product.img %>">
-            </picture>
-            <form action="/productos/borrar?m=DELETE" method="post" >
-                <input type="hidden" name="id" value="<%= product.id %>">
-                <button type="submit" class="boton">borrar</button>
-            </form>
-        </article>
-    <% } else { %>
-         <h2>
-            no hay productos
-         </h2>
-    <% } %>
+    <main>
+        <a href="/productos/" class="boton">volver</a>
+        <% if (product) { %>
+            <article>
+                <nav>
+                </nav>
+                <h2><%= product.name %><span>  $<%= product.price %> </span> </h2>
+                <nav>
+                    <a href="/productos/<%= product.categoria %>">
+                        categoria: <%= product.categoria %>
+                    </a>
+                </nav>
+                <picture>
+                    <img src="/products/<%= product.img %>">
+                </picture>
+                <form action="/productos/borrar?m=DELETE" method="post" >
+                    <input type="hidden" name="id" value="<%= product.id %>">
+                    <a href="/productos/edit/<%= product.id %>" class="boton">editar</a>
+                    <button type="submit" class="boton">borrar</button>
+                </form>
+            </article>
+        <% } else { %>
+             <h2>
+                no hay productos
+             </h2>
+        <% } %>
+    </main>
     <%- include("../partials/footer.ejs")  %>
 </body>
 </html>

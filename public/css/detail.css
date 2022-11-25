@@ -7,7 +7,13 @@ article{
 input{
     border: solid black 2px;
 }
-img{
-    width:100px;
-     height:100px
+article{
+    margin: 1rem 1rem;
+    border: solid 1px black;
+    padding: 15px;
+}
+
+article picture img{
+    width:300px;
+     height:300px
 }

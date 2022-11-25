@@ -1,5 +1,6 @@
 <li>
-    <a href="/productos/detalle/<%= element.id %>" class="productos">
-    <%= element.name %> <span> <%= element.price %></span> 
-    </a>
+    <p>nombre: <%= element.name %></p>
+    <p> precio: <%= element.price %></p> 
+    <a href="/productos/detalle/<%= element.id %>" class="productos"> detalles</a>
+    <button type="submit">comprar</button>
  </li>

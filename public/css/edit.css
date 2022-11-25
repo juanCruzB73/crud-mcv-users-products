@@ -1,0 +1,14 @@
+@import url("base.css");
+@import url('header.css');
+@import url('footer.css');
+
+form{
+    display: list-item;
+    margin: 1rem 1rem;
+    border: 1px solid black;
+    max-width: 40vw;
+    min-height: 50vh;
+}
+fieldset{
+    margin: 2rem 1rem;
+}
